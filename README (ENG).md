@@ -173,7 +173,7 @@ print(resp.json())
 For questions or suggestions, reach out at: [jordylubini64@gmail.com]
 
 ## 📎 Project Repository
-👉 https://github.com/Master-2290/MbulaCheck
+👉 [https://github.com/Master-2290/MbulaCheck](https://github.com/Master-2290/MbulaCheck)
 
 
 
