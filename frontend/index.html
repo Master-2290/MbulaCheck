@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MbulaCheck 🌦️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MbulaCheck 🌦️</h1>
+        <p>Prédictions météo pour Kinshasa</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Entrez les informations</h2>
+            <form id="weatherForm">
+                <div class="input-group">
+                    <label for="day">Jour</label>
+                    <input type="number" id="day" name="day" min="1" max="31" required>
+                </div>
+                <div class="input-group">
+                    <label for="month">Mois</label>
+                    <input type="number" id="month" name="month" min="1" max="12" required>
+                </div>
+                <div class="input-group">
+                    <label for="year">Année</label>
+                    <input type="number" id="year" name="year" min="2000" max="2100" required>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="regressionBtn">Prédire la météo</button>
+                    <button type="button" id="classificationBtn">Prédire la pluie</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results" id="results">
+            <h2>Résultats</h2>
+            <div id="output"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌍 MbulaCheck - Projet météo Kinshasa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
