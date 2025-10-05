@@ -2,7 +2,26 @@
 
 **MbulaCheck** is a FastAPI-based REST API developed by SkyLabs X for predicting weather (temperature, humidity, pressure, wind, rain probability) in Kinshasa (DRC), using models trained on NASA Earth data from 2018 to 2025. You can request predictions for a specific date or for a range of dates (a period).
 
-## **Developed by: Jordy Lubini, Ken Mwanza, James Kodila, Benally Kanangila — members of SkyLabs X**
+---
+
+## 👨‍💻 Developed by
+
+**SkyLabs X Team**  
+- Jordy Lubini  
+- Ken Mwanza  
+- James Kodila  
+- Benally Kanangila
+
+---
+
+## 🌍 Project Demo
+
+🎥 **Watch the 30-second demo video here:**  
+👉 [https://drive.google.com/file/d/1zptkjsKWz670qRp0Irmw-11KdnGEwhWj/view?usp=sharing](https://drive.google.com/file/d/1zptkjsKWz670qRp0Irmw-11KdnGEwhWj/view?usp=sharing)
+
+*(Accessible publicly — no login required)*
+
+---
 
 ## 🚀 Getting Started
 
@@ -11,7 +30,7 @@
 Make sure you have:
 
 - The trained models saved as `models/MbulaCheck_regressor.pkl` and `models/MbulaCheck_classifier.pkl`
-- The weather history as `data/nasa_weather.csv`
+- The weather history as `data/nasa_weather_2018_2025.csv`
 
 Then run:
 
@@ -151,4 +170,11 @@ print(resp.json())
 
 ## 📧 Contact
 
-For questions or suggestions, contact: [jordylubini64@gmail.com]
+For questions or suggestions, reach out at: [jordylubini64@gmail.com]
+
+
+## 📎 Project Repository
+👉
+
+
+
