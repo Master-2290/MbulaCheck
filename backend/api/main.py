@@ -24,7 +24,7 @@ app = FastAPI(
 # --------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "..", "models")
-DATA_PATH = os.path.join(BASE_DIR, "..", "data", "nasa_weather.csv")
+DATA_PATH = os.path.join(BASE_DIR, "..", "data", "nasa_weather_2018_2025.csv")
 
 try:
     REGRESSOR_PATH = os.path.join(MODEL_DIR, "MbulaCheck_regressor.pkl")

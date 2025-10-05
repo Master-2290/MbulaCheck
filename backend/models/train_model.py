@@ -17,11 +17,17 @@ except ImportError as e:
 # --------------------------
 # 1) Charger les données
 # --------------------------
+
+# Détermination automatique du chemin du fichier CSV
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, '..', 'data', 'nasa_weather_2018_2025.csv')
+
 try:
-    data_path = "../data/nasa_weather.csv"  # chemin relatif depuis backend/models/
-    df = pd.read_csv(data_path, parse_dates=["date"])
+    # Lecture directe du CSV (pas besoin de double lecture)
+    df = pd.read_csv(DATA_PATH, parse_dates=["date"])
     df = df.sort_values("date").reset_index(drop=True)
-    print(f"📂 Données chargées : {df.shape[0]} lignes, {df.shape[1]} colonnes")
+    print(
+        f"✅ Données chargées avec succès : {df.shape[0]} lignes, {df.shape[1]} colonnes")
 except Exception as e:
     print(f"❌ Erreur lors du chargement des données : {e}")
     sys.exit(1)
@@ -120,12 +126,21 @@ except Exception as e:
 # 6) Sauvegarde des modèles
 # --------------------------
 try:
-    os.makedirs("models", exist_ok=True)
+    # Dossier du script actuel (backend/models)
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    save_model(reg, "MbulaCheck_regressor.pkl")
-    save_model(calib_clf, "MbulaCheck_classifier.pkl")
+    # Chemins complets des fichiers de sortie
+    regressor_path = os.path.join(BASE_DIR, "MbulaCheck_regressor.pkl")
+    classifier_path = os.path.join(BASE_DIR, "MbulaCheck_classifier.pkl")
 
-    print("✅ Modèles sauvegardés dans backend/models/")
+    # Sauvegarde des modèles directement dans le même dossier
+    save_model(reg, regressor_path)
+    save_model(calib_clf, classifier_path)
+
+    print("✅ Modèles sauvegardés dans le même dossier que le script :")
+    print(f"   - {regressor_path}")
+    print(f"   - {classifier_path}")
+
 except Exception as e:
     print(f"❌ Erreur lors de la sauvegarde des modèles : {e}")
     sys.exit(1)
